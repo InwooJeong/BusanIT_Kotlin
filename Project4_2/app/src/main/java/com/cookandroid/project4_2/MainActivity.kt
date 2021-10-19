@@ -103,6 +103,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.Api80 -> imgAnd.setImageResource(R.drawable.api80)
                 R.id.Api90 -> imgAnd.setImageResource(R.drawable.api90)
                 R.id.Q10 -> imgAnd.setImageResource(R.drawable.q10)
+                else -> imgAnd.setImageResource(0)
             }
         }
 
@@ -114,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         btnReset.setOnClickListener{
             swcAgr.toggle()
             rGroup.clearCheck()
-            imgAnd.setImageResource(0)
+            //imgAnd.setImageResource(0)
         }
 
     }
