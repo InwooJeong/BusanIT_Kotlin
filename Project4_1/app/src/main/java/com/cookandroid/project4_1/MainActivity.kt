@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var textResult: TextView
     lateinit var num1: String
     lateinit var num2: String
-    var result: Int? = null
+    var result: Double? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = Integer.parseInt(num1) + Integer.parseInt(num2)
+                result = num1.toDouble() + num2.toDouble()
                 textResult.text = "계산 결과 : " + result.toString()
             }
         }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = Integer.parseInt(num1) - Integer.parseInt(num2)
+                result = num1.toDouble() - num2.toDouble()
                 textResult.text = "계산 결과 : " + result.toString()
             }
         }
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = Integer.parseInt(num1) * Integer.parseInt(num2)
+                result = num1.toDouble() * num2.toDouble()
                 textResult.text = "계산 결과 : " + result.toString()
             }
         }
@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = Integer.parseInt(num1) / Integer.parseInt(num2)
+                result = num1.toDouble() / num2.toDouble()
                 textResult.text = "계산 결과 : " + result.toString()
             }
         }
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = Integer.parseInt(num1) % Integer.parseInt(num2)
+                result = num1.toDouble() % num2.toDouble()
                 textResult.text = "계산 결과 : " + result.toString()
             }
         }

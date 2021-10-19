@@ -36,14 +36,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/BtnDiv"
+        android:id="@+id/BtnMul"
         android:layout_margin="10dp"
         android:text="곱하기"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/BtnMul"
+        android:id="@+id/BtnDiv"
         android:layout_margin="10dp"
         android:text="나누기"/>
 
