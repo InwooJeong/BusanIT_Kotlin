@@ -80,8 +80,13 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = num1.toDouble() / num2.toDouble()
-                textResult.text = "계산 결과 : " + result.toString()
+                if(num1.trim() == "0"||num2.trim() == "0"){
+                    Toast.makeText(this@MainActivity, "0이 위치 할 수 없는 연산입니다!",
+                        Toast.LENGTH_SHORT).show()
+                }else{
+                    result = num1.toDouble() / num2.toDouble()
+                    textResult.text = "계산 결과 : " + result.toString()
+                }
             }
         }
 
@@ -92,8 +97,13 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
                     Toast.LENGTH_SHORT).show()
             }else{
-                result = num1.toDouble() % num2.toDouble()
-                textResult.text = "계산 결과 : " + result.toString()
+                if(num1.trim() == "0"||num2.trim() == "0"){
+                    Toast.makeText(this@MainActivity, "0이 위치 할 수 없는 연산입니다!",
+                        Toast.LENGTH_SHORT).show()
+                }else{
+                    result = num1.toDouble() % num2.toDouble()
+                    textResult.text = "계산 결과 : " + result.toString()
+                }
             }
         }
 
