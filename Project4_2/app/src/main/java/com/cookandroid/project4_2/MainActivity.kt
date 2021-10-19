@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var text1 : TextView
+    /*lateinit var text1 : TextView
     lateinit var text2 : TextView
     lateinit var chkAgree : CheckBox
     lateinit var rGroup1 : RadioGroup
@@ -13,12 +13,23 @@ class MainActivity : AppCompatActivity() {
     lateinit var rdoCat : RadioButton
     lateinit var rdoRabbit : RadioButton
     lateinit var btnOK : Button
-    lateinit var imgPet : ImageView
+    lateinit var imgPet : ImageView*/
+
+    lateinit var text1 : TextView
+    lateinit var swcAgr : Switch
+    lateinit var text2 : TextView
+    lateinit var rGroup : RadioGroup
+    lateinit var api80 : RadioButton
+    lateinit var api90 : RadioButton
+    lateinit var q10 : RadioButton
+    lateinit var imgAnd : ImageView
+    lateinit var btnExit : Button
+    lateinit var btnReset : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        title = "애완동물 사진 보기"
+        /*title = "애완동물 사진 보기"
 
         text1 = findViewById<TextView>(R.id.Text1)
         chkAgree = findViewById<CheckBox>(R.id.ChkAgree)
@@ -55,7 +66,20 @@ class MainActivity : AppCompatActivity() {
                 else -> Toast.makeText(applicationContext,
                     "동물을 먼저 선택하세요", Toast.LENGTH_SHORT).show()
             }
-        }
+        }*/
+
+        title = "안드로이드 사진 소기"
+
+        text1 = findViewById<TextView>(R.id.Text1)
+        swcAgr = findViewById<Switch>(R.id.SwcAgr)
+        text2 = findViewById<TextView>(R.id.Text2)
+        rGroup = findViewById<RadioGroup>(R.id.Rgroup)
+        api80 = findViewById<RadioButton>(R.id.Api80)
+        api90 = findViewById<RadioButton>(R.id.Api90)
+        q10 = findViewById<RadioButton>(R.id.Q10)
+        imgAnd = findViewById<ImageView>(R.id.ImgAnd)
+        btnExit = findViewById<Button>(R.id.BtnExit)
+        btnReset = findViewById<Button>(R.id.BtnReset)
 
     }
 }
