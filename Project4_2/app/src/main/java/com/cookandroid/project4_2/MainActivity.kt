@@ -3,6 +3,7 @@ package com.cookandroid.project4_2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.core.app.ActivityCompat
 
 class MainActivity : AppCompatActivity() {
     /*lateinit var text1 : TextView
@@ -105,7 +106,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        
+        btnExit.setOnClickListener{
+            ActivityCompat.finishAffinity(this) //액티비티 종료
+            System.exit(0) //프로세스 종료
+        }
+
+        btnReset.setOnClickListener{
+            swcAgr.toggle()
+            rGroup.clearCheck()
+            imgAnd.setImageResource(0)
+        }
 
     }
 }
