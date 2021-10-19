@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnSub: Button
     lateinit var btnMul: Button
     lateinit var btnDiv: Button
+    lateinit var btnRem: Button
     lateinit var textResult: TextView
     lateinit var num1: String
     lateinit var num2: String
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         btnSub = findViewById<Button>(R.id.BtnSub)
         btnMul = findViewById<Button>(R.id.BtnMul)
         btnDiv = findViewById<Button>(R.id.BtnDiv)
-
+        btnRem = findViewById<Button>(R.id.BtnRem)
         textResult = findViewById<TextView>(R.id.TextResult)
 
         btnAdd.setOnClickListener{
@@ -60,6 +61,13 @@ class MainActivity : AppCompatActivity() {
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
             result = Integer.parseInt(num1) / Integer.parseInt(num2)
+            textResult.text = "계산 결과 : " + result.toString()
+        }
+
+        btnRem.setOnClickListener{
+            num1 = edit1.text.toString()
+            num2 = edit2.text.toString()
+            result = Integer.parseInt(num1) % Integer.parseInt(num2)
             textResult.text = "계산 결과 : " + result.toString()
         }
 
