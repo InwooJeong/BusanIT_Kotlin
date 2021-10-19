@@ -97,5 +97,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        rGroup.setOnCheckedChangeListener{group, checkedId ->
+            when(checkedId){
+                R.id.Api80 -> imgAnd.setImageResource(R.drawable.api80)
+                R.id.Api90 -> imgAnd.setImageResource(R.drawable.api90)
+                R.id.Q10 -> imgAnd.setImageResource(R.drawable.q10)
+            }
+        }
+
+        
+
     }
 }

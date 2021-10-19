@@ -110,11 +110,12 @@
     </RadioGroup>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:id="@+id/ImgAnd"
         android:scaleType="fitCenter"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        android:layout_margin="20dp"/>
 
     <Button
         android:layout_width="match_parent"
