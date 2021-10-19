@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        title = "초간단 계산기"
+        title = "계량된 초간단 계산기"
 
         edit1 = findViewById<EditText>(R.id.Edit1)
         edit2 = findViewById<EditText>(R.id.Edit2)
@@ -35,36 +35,32 @@ class MainActivity : AppCompatActivity() {
 
         textResult = findViewById<TextView>(R.id.TextResult)
 
-        btnAdd.setOnTouchListener{view, motionEvent ->
+        btnAdd.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
             result = Integer.parseInt(num1) + Integer.parseInt(num2)
             textResult.text = "계산 결과 : " + result.toString()
-            false
         }
 
-        btnSub.setOnTouchListener{view, motionEvent ->
+        btnSub.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
             result = Integer.parseInt(num1) - Integer.parseInt(num2)
             textResult.text = "계산 결과 : " + result.toString()
-            false
         }
 
-        btnMul.setOnTouchListener{view, motionEvent ->
+        btnMul.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
             result = Integer.parseInt(num1) * Integer.parseInt(num2)
             textResult.text = "계산 결과 : " + result.toString()
-            false
         }
 
-        btnDiv.setOnTouchListener{view, motionEvent ->
+        btnDiv.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
             result = Integer.parseInt(num1) / Integer.parseInt(num2)
             textResult.text = "계산 결과 : " + result.toString()
-            false
         }
 
     }
