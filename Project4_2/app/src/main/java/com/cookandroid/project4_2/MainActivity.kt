@@ -81,5 +81,21 @@ class MainActivity : AppCompatActivity() {
         btnExit = findViewById<Button>(R.id.BtnExit)
         btnReset = findViewById<Button>(R.id.BtnReset)
 
+        swcAgr.setOnCheckedChangeListener{CompoundButton, onSwitch ->
+            if(onSwitch){
+                text2.visibility = android.view.View.VISIBLE
+                rGroup.visibility = android.view.View.VISIBLE
+                imgAnd.visibility = android.view.View.VISIBLE
+                btnExit.visibility = android.view.View.VISIBLE
+                btnReset.visibility = android.view.View.VISIBLE
+            }else{
+                text2.visibility = android.view.View.INVISIBLE
+                rGroup.visibility = android.view.View.INVISIBLE
+                imgAnd.visibility = android.view.View.INVISIBLE
+                btnExit.visibility = android.view.View.INVISIBLE
+                btnReset.visibility = android.view.View.INVISIBLE
+            }
+        }
+
     }
 }
