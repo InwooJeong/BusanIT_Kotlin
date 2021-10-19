@@ -47,7 +47,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
+        btnOK.setOnClickListener{
+            when(rGroup1.checkedRadioButtonId){
+                R.id.RdoDog -> imgPet.setImageResource(R.drawable.dog2)
+                R.id.RdoCat -> imgPet.setImageResource(R.drawable.cat)
+                R.id.RdoRabbit -> imgPet.setImageResource(R.drawable.rabbit)
+                else -> Toast.makeText(applicationContext,
+                    "동물을 먼저 선택하세요", Toast.LENGTH_SHORT).show()
+            }
+        }
 
     }
 }
