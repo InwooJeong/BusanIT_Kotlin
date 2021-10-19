@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this@MainActivity, "0이 위치 할 수 없는 연산입니다!",
                         Toast.LENGTH_SHORT).show()
                 }else{
-                    result = num1.toDouble() / num2.toDouble()
+                    result = ((num1.toDouble() / num2.toDouble())*100).toInt()/100.0
                     textResult.text = "계산 결과 : " + result.toString()
                 }
             }
