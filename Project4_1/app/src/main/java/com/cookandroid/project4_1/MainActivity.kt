@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -39,36 +40,61 @@ class MainActivity : AppCompatActivity() {
         btnAdd.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
-            result = Integer.parseInt(num1) + Integer.parseInt(num2)
-            textResult.text = "계산 결과 : " + result.toString()
+            if(num1.trim().isEmpty()||num2.trim().isEmpty()){
+                Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
+                    Toast.LENGTH_SHORT).show()
+            }else{
+                result = Integer.parseInt(num1) + Integer.parseInt(num2)
+                textResult.text = "계산 결과 : " + result.toString()
+            }
         }
 
         btnSub.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
-            result = Integer.parseInt(num1) - Integer.parseInt(num2)
-            textResult.text = "계산 결과 : " + result.toString()
+            if(num1.trim().isEmpty()||num2.trim().isEmpty()){
+                Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
+                    Toast.LENGTH_SHORT).show()
+            }else{
+                result = Integer.parseInt(num1) - Integer.parseInt(num2)
+                textResult.text = "계산 결과 : " + result.toString()
+            }
         }
 
         btnMul.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
-            result = Integer.parseInt(num1) * Integer.parseInt(num2)
-            textResult.text = "계산 결과 : " + result.toString()
+            if(num1.trim().isEmpty()||num2.trim().isEmpty()){
+                Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
+                    Toast.LENGTH_SHORT).show()
+            }else{
+                result = Integer.parseInt(num1) * Integer.parseInt(num2)
+                textResult.text = "계산 결과 : " + result.toString()
+            }
         }
 
         btnDiv.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
-            result = Integer.parseInt(num1) / Integer.parseInt(num2)
-            textResult.text = "계산 결과 : " + result.toString()
+            if(num1.trim().isEmpty()||num2.trim().isEmpty()){
+                Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
+                    Toast.LENGTH_SHORT).show()
+            }else{
+                result = Integer.parseInt(num1) / Integer.parseInt(num2)
+                textResult.text = "계산 결과 : " + result.toString()
+            }
         }
 
         btnRem.setOnClickListener{
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
-            result = Integer.parseInt(num1) % Integer.parseInt(num2)
-            textResult.text = "계산 결과 : " + result.toString()
+            if(num1.trim().isEmpty()||num2.trim().isEmpty()){
+                Toast.makeText(this@MainActivity, "값이 비었습니다. 값을 확인하세요!",
+                    Toast.LENGTH_SHORT).show()
+            }else{
+                result = Integer.parseInt(num1) % Integer.parseInt(num2)
+                textResult.text = "계산 결과 : " + result.toString()
+            }
         }
 
     }
