@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        title = "테이블레이아웃 계산기"
+        //title = "테이블레이아웃 계산기"
+        title = "그리드 레이아웃 계산기"
 
         edit1 = findViewById<EditText>(R.id.Edit1)
         edit2 = findViewById<EditText>(R.id.Edit2)
