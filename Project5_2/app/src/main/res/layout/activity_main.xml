@@ -119,88 +119,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/gridLayout1"
+    android:orientation="vertical"
     android:columnCount="5"
-    android:rowCount="9">
+    android:rowCount="10">
 
     <EditText
-        android:layout_column="0"
-        android:layout_row="0"
         android:id="@+id/Edit1"
         android:layout_columnSpan="5"
         android:hint="숫자 1 입력"
         android:layout_gravity="fill_horizontal"/>
 
     <EditText
-        android:layout_column="0"
-        android:layout_row="1"
         android:id="@+id/Edit2"
         android:layout_columnSpan="5"
         android:hint="숫자 2 입력"
         android:layout_gravity="fill_horizontal"/>
 
-    <Button
-        android:layout_column="0"
-        android:layout_row="2"
-        android:id="@+id/BtnNum0"
-        android:text="0"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/BtnNum0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/BtnNum1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/BtnNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/BtnNum3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/BtnNum4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:id="@+id/BtnNum5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/BtnNum6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/BtnNum7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/BtnNum8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/BtnNum9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="9" />
+
+    </LinearLayout>
 
     <Button
-        android:layout_column="1"
-        android:layout_row="2"
-        android:id="@+id/BtnNum1"
-        android:text="1"/>
-
-    <Button
-        android:layout_column="2"
-        android:layout_row="2"
-        android:id="@+id/BtnNum2"
-        android:text="2"/>
-
-    <Button
-        android:layout_column="3"
-        android:layout_row="2"
-        android:id="@+id/BtnNum3"
-        android:text="3"/>
-
-    <Button
-        android:layout_column="4"
-        android:layout_row="2"
-        android:id="@+id/BtnNum4"
-        android:text="4"/>
-
-    <Button
-        android:layout_column="0"
-        android:layout_row="3"
-        android:id="@+id/BtnNum5"
-        android:text="5"/>
-
-    <Button
-        android:layout_column="1"
-        android:layout_row="3"
-        android:id="@+id/BtnNum6"
-        android:text="6"/>
-
-    <Button
-        android:layout_column="2"
-        android:layout_row="3"
-        android:id="@+id/BtnNum7"
-        android:text="7"/>
-
-    <Button
-        android:layout_column="3"
-        android:layout_row="3"
-        android:id="@+id/BtnNum8"
-        android:text="8"/>
-
-    <Button
-        android:layout_column="4"
-        android:layout_row="3"
-        android:id="@+id/BtnNum9"
-        android:text="9"/>
-
-    <Button
-        android:layout_column="0"
-        android:layout_row="4"
         android:layout_columnSpan="5"
         android:layout_gravity="fill_horizontal"
         android:id="@+id/BtnAdd"
@@ -208,8 +226,6 @@
         android:text="더하기"/>
 
     <Button
-        android:layout_column="0"
-        android:layout_row="5"
         android:layout_columnSpan="5"
         android:layout_gravity="fill_horizontal"
         android:id="@+id/BtnSub"
@@ -217,8 +233,6 @@
         android:text="빼기"/>
 
     <Button
-        android:layout_column="0"
-        android:layout_row="6"
         android:layout_columnSpan="5"
         android:layout_gravity="fill_horizontal"
         android:id="@+id/BtnMul"
@@ -226,8 +240,6 @@
         android:text="곱하기"/>
 
     <Button
-        android:layout_column="0"
-        android:layout_row="7"
         android:layout_columnSpan="5"
         android:layout_gravity="fill_horizontal"
         android:id="@+id/BtnDiv"
@@ -237,8 +249,6 @@
     <TextView
         android:id="@+id/TextResult"
         android:layout_margin="5dp"
-        android:layout_column="0"
-        android:layout_row="8"
         android:layout_span="5"
         android:layout_gravity="fill_horizontal"
         android:text="계산 결과 : "
