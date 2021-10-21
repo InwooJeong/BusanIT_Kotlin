@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
         calView = findViewById<CalendarView>(R.id.calendarView1)
 
         tvYear = findViewById<TextView>(R.id.tvYear)
-        tvYear = findViewById<TextView>(R.id.tvMonth)
-        tvYear = findViewById<TextView>(R.id.tvDay)
-        tvYear = findViewById<TextView>(R.id.tvHour)
-        tvYear = findViewById<TextView>(R.id.tvMinute)
+        tvMonth = findViewById<TextView>(R.id.tvMonth)
+        tvDay = findViewById<TextView>(R.id.tvDay)
+        tvHour = findViewById<TextView>(R.id.tvHour)
+        tvMinute = findViewById<TextView>(R.id.tvMinute)
 
         tPicker.visibility = View.INVISIBLE
         calView.visibility = View.INVISIBLE
@@ -63,6 +63,24 @@ class MainActivity : AppCompatActivity() {
             chrono.base = SystemClock.elapsedRealtime()
             chrono.start()
             chrono.setTextColor(Color.RED)
+        }
+
+        btnEnd.setOnClickListener{
+            chrono.stop()
+            chrono.setTextColor(Color.BLUE)
+
+            tvYear.text = Integer.toString(selectYear)
+            tvMonth.text = Integer.toString(selectMonth)
+            tvDay.text = Integer.toString(selectDay)
+
+            tvHour.text = Integer.toString(tPicker.currentHour)
+            tvMinute.text = Integer.toString(tPicker.currentMinute)
+        }
+
+        calView.setOnDateChangeListener{view, year, month, dayOfMonth ->
+            selectYear = year
+            selectMonth = month+1
+            selectDay = dayOfMonth
         }
 
     }
