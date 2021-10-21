@@ -46,11 +46,17 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <CalendarView
+            <!--<CalendarView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/calendarView1"
-                android:showWeekNumber="false"/>
+                android:showWeekNumber="false"/>-->
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker1"
+                <!--android:calendarViewShown="false"-->
+                android:datePickerMode="spinner"/>
             <TimePicker
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
