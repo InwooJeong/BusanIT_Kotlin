@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RatingBar
+        <!--<RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBar1"/>
@@ -41,8 +41,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnDec"
-            android:text="감소시키기"/>
+            android:text="감소시키기"/>-->
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtNum1"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtNum2"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="더하기"
+            android:id="@+id/btnNewActivity"/>
 
     </LinearLayout>
 

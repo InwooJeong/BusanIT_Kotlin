@@ -1,16 +1,20 @@
 package com.cookandroid.ch10
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.RatingBar
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        title="레이팅바"
+        /*title="레이팅바"
 
         var rating1 : RatingBar
         var rating2 : RatingBar
@@ -34,7 +38,26 @@ class MainActivity : AppCompatActivity() {
             rating1.rating = rating1.rating - rating1.stepSize
             rating2.rating = rating2.rating - rating2.stepSize
             rating3.rating = rating3.rating - rating3.stepSize
-        }
+        }*/
 
+        title="메인 액티비티"
+
+        var btnNewActivity = findViewById<Button>(R.id.btnNewActivity)
+        btnNewActivity.setOnClickListener{
+            var edtNum1 = findViewById<EditText>(R.id.edtNum1)
+            var edtNum2 = findViewById<EditText>(R.id.edtNum2)
+            var intent = Intent(applicationContext, SecondActivity::class.java)
+            intent.putExtra("Num1", Integer.parseInt(edtNum1.text.toString()))
+            intent.putExtra("Num2", Integer.parseInt(edtNum2.text.toString()))
+            startActivityForResult(intent, 0)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == Activity.RESULT_OK){
+            var hap = data!!.getIntExtra("Hap",0)
+            Toast.makeText(applicationContext, "합계 : $hap", Toast.LENGTH_SHORT).show()
+        }
     }
 }
