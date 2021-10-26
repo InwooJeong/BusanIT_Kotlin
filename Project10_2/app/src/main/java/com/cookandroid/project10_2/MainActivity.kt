@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         var voteCount = IntArray(9)
         for(i in 0..8)
-            voteCount[i]
+            voteCount[i] = 0
         var image = arrayOfNulls<ImageView>(9)
         var imageId = arrayOf(R.id.iv1, R.id.iv2, R.id.iv3,
                               R.id.iv4, R.id.iv5, R.id.iv6,
