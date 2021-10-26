@@ -11,6 +11,25 @@
         android:layout_width="match_parent"
         android:orientation="vertical">
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup">
+
+            <RadioButton
+                android:id="@+id/r2nd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="2nd Activity"/>
+
+            <RadioButton
+                android:id="@+id/r3rd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3rd Activity"/>
+        </RadioGroup>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
