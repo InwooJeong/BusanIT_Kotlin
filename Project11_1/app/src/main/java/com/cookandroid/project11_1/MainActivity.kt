@@ -47,8 +47,8 @@ class MainActivity : AppCompatActivity() {
                 var dlg = AlertDialog.Builder(this@MainActivity)
                 var ivPoster = dialogView.findViewById<ImageView>(R.id.ivPoster)
                 ivPoster.setImageResource(posterID[position])
-                dlg.setTitle("큰 포스터")
-                dlg.setIcon(R.drawable.ic_launcher_background)
+                dlg.setTitle(movieName[position])
+                dlg.setIcon(R.drawable.ic_launcher_foreground)
                 dlg.setView(dialogView)
                 dlg.setNegativeButton("닫기", null)
                 dlg.show()
@@ -70,6 +70,17 @@ class MainActivity : AppCompatActivity() {
             R.drawable.mov01, R.drawable.mov02, R.drawable.mov03, R.drawable.mov04,
             R.drawable.mov05, R.drawable.mov06, R.drawable.mov07, R.drawable.mov08,
             R.drawable.mov09, R.drawable.mov10
+        )
+
+        var movieName = arrayOf(
+            "써니", "완득이", "괴물", "라디오 스타", "비열한 거리",
+            "왕의 남자", "아일랜드", "웰컴 투 동막골", "헬보이: 골든아미", "백 투더 퓨쳐",
+            "써니", "완득이", "괴물", "라디오 스타", "비열한 거리",
+            "왕의 남자", "아일랜드", "웰컴 투 동막골", "헬보이: 골든아미", "백 투더 퓨쳐",
+            "써니", "완득이", "괴물", "라디오 스타", "비열한 거리",
+            "왕의 남자", "아일랜드", "웰컴 투 동막골", "헬보이: 골든아미", "백 투더 퓨쳐",
+            "써니", "완득이", "괴물", "라디오 스타", "비열한 거리",
+            "왕의 남자", "아일랜드", "웰컴 투 동막골", "헬보이: 골든아미", "백 투더 퓨쳐"
         )
 
     }
