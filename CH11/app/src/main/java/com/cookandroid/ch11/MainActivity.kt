@@ -53,10 +53,38 @@ class MainActivity : AppCompatActivity() {
                 "아바타", "대부", "국가대표", "토이스토리3",
                 "마당을 나온 암탉", "죽은 시인의 사회", "서유기")
 
-        var spinner = findViewById<Spinner>(R.id.spinner1)
+        var posterID = arrayOf(
+            R.drawable.mov21, R.drawable.mov22, R.drawable.mov23, R.drawable.mov24,
+            R.drawable.mov25, R.drawable.mov26, R.drawable.mov27, R.drawable.mov28,
+            R.drawable.mov29, R.drawable.mov30
+        )
 
+        var iv = findViewById<ImageView>(R.id.iv)
+
+        var spinner = findViewById<Spinner>(R.id.spinner1)
         var adapter: ArrayAdapter<String>
+
         adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, movie)
         spinner.adapter = adapter
+
+        //spinner.setSelection(1)
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long,
+            ) {
+                posterID.get(position)?.let{
+                    iv.setImageResource(posterID[position])
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+        }
     }
 }
