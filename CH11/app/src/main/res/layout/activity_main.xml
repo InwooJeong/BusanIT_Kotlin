@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical">
 
-        <EditText
+        <!--<EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edtItem"/>
@@ -25,7 +25,11 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listView1"/>
+            android:id="@+id/listView1"/>-->
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner1"/>
 
     </LinearLayout>
 
