@@ -4,10 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RatingBar
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,12 +40,23 @@ class MainActivity : AppCompatActivity() {
         title="메인 액티비티"
 
         var btnNewActivity = findViewById<Button>(R.id.btnNewActivity)
+        var rGroup = findViewById<RadioGroup>(R.id.rGroup)
+
         btnNewActivity.setOnClickListener{
             var edtNum1 = findViewById<EditText>(R.id.edtNum1)
             var edtNum2 = findViewById<EditText>(R.id.edtNum2)
             var intent = Intent(applicationContext, SecondActivity::class.java)
+
+            when(rGroup.checkedRadioButtonId){
+                R.id.rAdd -> intent.putExtra("Calc","+")
+                R.id.rSub -> intent.putExtra("Calc", "-")
+                R.id.rMul -> intent.putExtra("Calc", "*")
+                R.id.rDiv -> intent.putExtra("Calc", "/")
+            }
+
             intent.putExtra("Num1", Integer.parseInt(edtNum1.text.toString()))
             intent.putExtra("Num2", Integer.parseInt(edtNum2.text.toString()))
+
             startActivityForResult(intent, 0)
         }
     }
@@ -57,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK){
             var hap = data!!.getIntExtra("Hap",0)
-            Toast.makeText(applicationContext, "합계 : $hap", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "결과 : $hap", Toast.LENGTH_SHORT).show()
         }
     }
 }
