@@ -1,10 +1,12 @@
 package com.cookandroid.project14_1
 
+import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
 
-class MusicService : android.app.Service(){
+class MusicService : Service(){
+
     lateinit var mp : MediaPlayer
 
     override fun onBind(intent: Intent?): IBinder? {
