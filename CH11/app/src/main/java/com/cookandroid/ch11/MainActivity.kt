@@ -76,9 +76,13 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long,
             ) {
-                posterID.get(position)?.let{
+                /*posterID.get(position)?.let{
                     iv.setImageResource(posterID[position])
-                }
+                }*/
+                var iv = findViewById<ImageView>(R.id.iv)
+                iv.scaleType = ImageView.ScaleType.FIT_CENTER
+                iv.setPadding(20,20,20,20)
+                iv.setImageResource((posterID[position]))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
